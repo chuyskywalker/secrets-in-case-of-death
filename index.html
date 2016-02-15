@@ -1,4 +1,4 @@
-<html>
+                                                                                   n                 <html>
 <head>
 
     <title>Secrets In Case Of Death</title>
@@ -187,7 +187,7 @@
             var combined = secrets.combine(shares);
             var recovered = secrets.hex2str(combined);
 
-            document.getElementById('recovered').innerHTML = recovered;
+            document.getElementById('recovered').value = recovered;
 
             alert("The secrets have been recovered and are now on page");
 
@@ -199,15 +199,10 @@
     </script>
 
     </head>
-
     <body>
-
-    <p>This secrete requires {sharecount} shares to recover. Simply collect enough shares, enter them all below, and submit. No data leaves your browser.</p>
-
+    <p>This secret requires {sharecount} shares to recover. Collect enough shares, enter them all below, and submit. No data leaves your browser.</p>
     <form id="theform"></form>
-
-    <pre><code id="recovered"></code></pre>
-
+    <textarea id="recovered" style="width: 100%;height: 600px"></textarea>
     </body>
 </html>
 </textarea>
